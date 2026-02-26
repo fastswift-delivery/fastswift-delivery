@@ -3,16 +3,62 @@
 <head>
   <title>Fast & Swift (Speed Focus)</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Fast & Swift – Fast and reliable delivery services for your city. Order now and get your packages delivered quickly.">
+  <meta name="description" content="Fast & Swift Delivery – Express parcel, food, and document delivery services. Quick, reliable, and same-day delivery in your city.">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; background-color: #f9f9f9; color: #333; }
-    header { text-align: center; padding: 30px 0; }
-    header h1 { margin-bottom: 5px; color: #1a73e8; }
-    header p { font-size: 16px; color: #555; }
-    .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
-    .section h2 { margin-top: 0; }
-    button { background-color: #1a73e8; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #155ab6; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    header h1 {
+      margin-bottom: 5px;
+      color: #1a73e8;
+    }
+    header p {
+      font-size: 16px;
+      color: #555;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      margin-top: 0;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #1a73e8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
   </style>
 </head>
 <body>
@@ -33,9 +79,28 @@
 </div>
 
 <div class="section">
-  <h2>How to Order</h2>
-  <p>Click the button below to place your order online and track it in real-time.</p>
-  <button>Place an Order</button>
+  <h2>Place an Order</h2>
+  <p>Fill out the form below to submit your delivery request. You will receive a confirmation by email.</p>
+
+  <!-- Formspree form -->
+  <form action="https://formspree.io/f/xbdawabz" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="details">Order Details:</label>
+    <textarea id="details" name="details" rows="3" required></textarea>
+
+    <button type="submit">Place Order</button>
+  </form>
 </div>
 
 <div class="section">
